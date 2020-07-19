@@ -1,0 +1,22 @@
+<div class="modal" #myModal id="myModal" *ngIf="showModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+ 
+      <!-- Modal Header -->
+      <div class="modal-header" *ngIf="headerText">
+        <h4 class="modal-title" [innerHTML]="headerText"></h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+ 
+      <!-- Modal Body -->
+      <div class="modal-body" [innerHTML]="bodyText">
+      </div>
+ 
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal()">Close</button>
+      </div>
+ 
+    </div>
+  </div>
+</div>

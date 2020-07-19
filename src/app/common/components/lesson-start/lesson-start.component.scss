@@ -1,0 +1,84 @@
+.header-section-ls {
+    position: fixed;
+    width: 100%;
+    color: #686666;
+    background-color: #fff;
+    z-index: 999;
+}
+.header-elm {
+    padding: 1em;
+    background: #504D4D;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.step-text {
+    margin-left: 20px;
+}
+.notification-icon {
+    float: right;
+}
+.body-section-ls {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    flex-direction: column;
+    color: #504D4D;
+    .text1 {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 20px 0 25px 0;
+    }
+    .text2 {
+        font-size: 15px;
+        height: 30px;
+    }
+    .text3 {
+        font-weight: bold;
+        font-size: 17px;
+        height: 35px;
+        margin-top: 5px;
+    }
+    .regional-text {
+        font-size: 15px;
+        height: 30px;
+    }
+    .image-icon {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa-image {
+            color: #777676;
+        }
+    }
+    .lets-bigin-btn {
+        background: #777676;
+        border-radius: 2px;
+        font-size: 15px;
+        color: #fff;
+        padding: 15px 90px;
+        margin: 20px 0 25px 0;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .get-start-qtn {
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .video-sec {
+        width: 100%;
+        video {
+            padding: 0 15px;
+        }
+    }
+    .regional-video-desc {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,36 @@
+<div class="audio-recording">
+    <div *ngIf="!blobData" class="full-width">
+        <div *ngIf="isRecording" class="rec-in-prgs">
+            <div class="rec-time-secrion">
+                <span class="recordning-time">{{recordedTime}}</span>
+                <span class="recordning-text">Recordning Answer</span>
+            </div>
+            <div class="disp-flex">
+                <span class="recorded-text">Speech text</span>
+                <span class="recording-icon" (click)="stopRecording()">
+                    <i class="fa fa-square"></i>
+                </span>
+            </div>
+        </div>
+        <div class="record-section" *ngIf="!isRecording">
+            <span class="record-text">
+                Record your Answer here
+            </span>
+            <span class="micro-phone-icon">
+                <i *ngIf="!isRecording" class="fa fa-microphone" (click)="startRecording()"></i>
+            </span>
+        </div>
+    </div>
+    <div class="audio-section" *ngIf="blobData">
+        <div class="audio-elm">
+            <audio *ngIf="!isRecording && blobUrl"  controls>
+                <source [src]="blobUrl" type="audio/webm">
+            </audio>
+            <span (click)="sendAudioBlob()"><i class="fa fa-paper-plane"></i></span>
+        </div>
+        <div class="recorded-text">Recorded text</div>
+    </div>
+    <span class="cancel-record" (click)="abortRecording()" *ngIf="isRecording || blobData">
+        <i class="fa fa-times"></i>
+    </span>
+</div>

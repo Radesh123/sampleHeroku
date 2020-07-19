@@ -1,0 +1,31 @@
+<div class="header-section-ls">
+    <div class="header-elm">
+        <span class="back-btn" (click)="prevSection()">
+            <i class="fa fa-arrow-left"></i>
+        </span>
+        <span class="step-text">{{stepText}}</span>
+        <span class="notification-icon">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+        </span>
+    </div>
+</div>
+<div class="body-section-ls" *ngIf="stepCount === 0">
+    <span class="text1">{{text1}}</span>
+    <span class="text2">{{text2}}</span>
+    <span class="image-icon">
+        <i class="fa fa-image fa-2x"></i>
+    </span>
+    <span class="lets-bigin-btn" (click)="startLesson()">Let's Begin</span>
+    <span class="get-start-qtn" (click)="showInstructions()">How to get Started?</span>
+</div>
+<div class="body-section-ls" *ngIf="stepCount === 1">
+    <span class="text3">{{text3}}</span>
+    <span class="regional-text">{{regText}}</span>
+    <span class="video-sec">
+        <video width="100%" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+    </span>
+    <span class="regional-video-desc">{{regVideoDesc}}</span>
+</div>
